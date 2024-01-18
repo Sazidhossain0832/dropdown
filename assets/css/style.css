@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+:root{
+    --Poppins--:'Poppins', sans-serif;
+    --body-color--:#3A3A3A;
+    --primary-color--:#E02C6D;    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    color: var(--body-color--);
+    transition: all .5s ease;
+}
+html,
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: var(--Poppins--);
+    color: var(--body-color--);
+}
+
+.container{    
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.influencer-header .header-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.influencer-header .header-wrap .menu > ul{
+    display: flex;
+    list-style: none;
+}
+.influencer-header .header-wrap .menu ul li{
+    position: relative;
+}
+.influencer-header .header-wrap .menu ul li+li{
+    margin-left: 34px;
+}
+
+.influencer-header .header-wrap .menu ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--body-color--);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+.influencer-header .header-wrap .menu ul li a i{
+    font-size: 18px;
+    color: #000;
+}
+.influencer-header .header-wrap .menu ul li a:hover{
+    color: var(--primary-color--);
+}
+
+/************** Drobdown Css ***********/
+
+.influencer-header .header-wrap .menu ul ul{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000;
+    width: 250px;
+    padding: 20px;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all .5s ease;
+}
+
+.influencer-header .header-wrap .menu ul ul ul{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #000;
+    width: 250px;
+    padding: 20px;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all .5s ease;
+}
+
+.influencer-header .header-wrap .menu ul ul li{
+    margin: 0;
+}
+.influencer-header .header-wrap .menu ul ul li a{
+    color: #fff;
+    font-size: 14px;
+}
+.influencer-header .header-wrap .menu ul > li:hover > ul{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.influencer-header .header-wrap .menu ul li ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
